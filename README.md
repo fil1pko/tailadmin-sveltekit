@@ -1,0 +1,1 @@
+## I refuse to self-host Next.js, so I built this instead.
