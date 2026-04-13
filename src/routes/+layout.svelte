@@ -1,9 +1,15 @@
 <script lang="ts">
+	import '@fontsource-variable/outfit';
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
-{@render children()}
+<svelte:head>
+  	<link rel="icon" href={favicon} />
+</svelte:head>
+
+<div>
+  	{@render children()}
+</div>	
