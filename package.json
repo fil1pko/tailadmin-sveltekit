@@ -45,6 +45,7 @@
 		"@fullcalendar/interaction": "^6.1.20",
 		"@fullcalendar/timegrid": "^6.1.20",
 		"apexcharts": "^5.10.6",
-		"svelte-apexcharts": "^1.0.2"
+		"flatpickr": "^4.6.13",
+		"jsvectormap": "^1.7.0"
 	}
 }
