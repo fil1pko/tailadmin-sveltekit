@@ -10,7 +10,7 @@
           EventClickArg, 
           EventContentArg 
      } from '@fullcalendar/core';
-     import { Modal } from "$components/ui/modal/index.svelte";
+     import  Modal  from "$components/ui/modal/index.svelte";
 
      interface CalendarEvent extends EventInput {
           extendedProps: {
@@ -172,7 +172,7 @@
      <Modal
           {isOpen}
           onClose={() => (isOpen = false)}
-          class="max-w-[700px] p-6 lg:p-10"
+          className="max-w-[700px] p-6 lg:p-10"
      >
           <div class="flex flex-col px-2 overflow-y-auto custom-scrollbar">
                <div>
