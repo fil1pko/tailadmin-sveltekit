@@ -39,6 +39,12 @@
 		"vite": "^8.0.7"
 	},
 	"dependencies": {
-		"@fontsource-variable/outfit": "^5.2.8"
+		"@fontsource-variable/outfit": "^5.2.8",
+		"@fullcalendar/core": "^6.1.20",
+		"@fullcalendar/daygrid": "^6.1.20",
+		"@fullcalendar/interaction": "^6.1.20",
+		"@fullcalendar/timegrid": "^6.1.20",
+		"apexcharts": "^5.10.6",
+		"svelte-apexcharts": "^1.0.2"
 	}
 }
