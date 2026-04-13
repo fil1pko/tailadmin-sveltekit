@@ -46,6 +46,7 @@
 		"@fullcalendar/timegrid": "^6.1.20",
 		"apexcharts": "^5.10.6",
 		"flatpickr": "^4.6.13",
-		"jsvectormap": "^1.7.0"
+		"jsvectormap": "^1.7.0",
+		"tailwind-merge": "^3.5.0"
 	}
 }
