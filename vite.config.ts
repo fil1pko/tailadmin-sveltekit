@@ -52,4 +52,7 @@ export default defineConfig({
 			}
 		}
 	],
+	ssr: {
+          noExternal: ['jsvectormap']
+     },
 });

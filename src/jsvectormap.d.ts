@@ -1,12 +1,11 @@
 declare module 'jsvectormap' {
-     const JsVectorMap: new (options: Record<string, unknown>) => {
-          destroy: () => void;
-          updateSeries: (series: unknown) => void;
-     };
-     export default JsVectorMap;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const jsVectorMap: any;
+	export default jsVectorMap;
 }
 
-declare module 'jsvectormap/dist/maps/world-mill' {
-     const map: unknown;
-     export default map;
+declare module 'jsvectormap/dist/maps/world.js' {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const world: any;
+	export default world;
 }
