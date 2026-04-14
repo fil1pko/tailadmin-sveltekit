@@ -5,8 +5,6 @@
      import Button from "$components/ui/button/Button.svelte";
      import { ChevronLeftIcon, EyeCloseIcon, EyeIcon } from "$lib/icons";
 
-     import { resolve } from '$app/paths';
-
      let showPassword = $state(false);
      let isChecked = $state(false);
 </script>
@@ -14,7 +12,7 @@
 <div class="flex flex-col flex-1 lg:w-1/2 w-full">
      <div class="w-full max-w-md sm:pt-10 mx-auto mb-5">
           <a
-               href={resolve('/')}
+               href="/"
                class="inline-flex items-center text-sm text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
           >
                <ChevronLeftIcon />
@@ -49,28 +47,24 @@
                               Sign in with X
                          </button>
                     </div>
+
                     <div class="relative py-3 sm:py-5">
                          <div class="absolute inset-0 flex items-center">
                               <div class="w-full border-t border-gray-200 dark:border-gray-800"></div>
                          </div>
                          <div class="relative flex justify-center text-sm">
-                              <span class="p-2 text-gray-400 bg-white dark:bg-gray-900 sm:px-5 sm:py-2">
-                                   Or
-                              </span>
+                              <span class="p-2 text-gray-400 bg-white dark:bg-gray-900 sm:px-5 sm:py-2">Or</span>
                          </div>
                     </div>
-                    <form>
+
+                    <form onsubmit={(e) => e.preventDefault()}>
                          <div class="space-y-6">
                               <div>
-                                   <Label>
-                                        Email <span class="text-error-500">*</span>
-                                   </Label>
+                                   <Label>Email <span class="text-error-500">*</span></Label>
                                    <Input placeholder="info@gmail.com" type="email" />
                               </div>
                               <div>
-                                   <Label>
-                                        Password <span class="text-error-500">*</span>
-                                   </Label>
+                                   <Label>Password <span class="text-error-500">*</span></Label>
                                    <div class="relative">
                                         <Input
                                              type={showPassword ? "text" : "password"}
@@ -79,7 +73,7 @@
                                         <button
                                              type="button"
                                              onclick={() => (showPassword = !showPassword)}
-                                             class="absolute z-30 -translate-y-1/2 cursor-pointer right-4 top-1/2 bg-transparent border-none p-0"
+                                             class="absolute z-30 -translate-y-1/2 cursor-pointer right-4 top-1/2 bg-transparent border-none p-0 focus:outline-none"
                                         >
                                              {#if showPassword}
                                                   <EyeIcon class="fill-gray-500 dark:fill-gray-400" />
@@ -89,22 +83,24 @@
                                         </button>
                                    </div>
                               </div>
+                              
                               <div class="flex items-center justify-between">
                                    <div class="flex items-center gap-3">
-                                        <Checkbox checked={isChecked} onchange={(v) => (isChecked = v)} />
+                                        <Checkbox 
+                                             checked={isChecked} 
+                                             onchange={(v: boolean) => (isChecked = v)} 
+                                        />
                                         <span class="block font-normal text-gray-700 text-theme-sm dark:text-gray-400">
                                              Keep me logged in
                                         </span>
                                    </div>
-                                   <a
-                                        href="/reset-password"
-                                        class="text-sm text-brand-500 hover:text-brand-600 dark:text-brand-400"
-                                   >
+                                   <a href="/reset-password" class="text-sm text-brand-500 hover:text-brand-600 dark:text-brand-400">
                                         Forgot password?
                                    </a>
                               </div>
+
                               <div>
-                                   <Button class="w-full" size="sm">
+                                   <Button className="w-full" size="sm">
                                         Sign in
                                    </Button>
                               </div>
@@ -114,10 +110,7 @@
                     <div class="mt-5">
                          <p class="text-sm font-normal text-center text-gray-700 dark:text-gray-400 sm:text-start">
                               Don't have an account? 
-                              <a
-                                   href="/signup"
-                                   class="text-brand-500 hover:text-brand-600 dark:text-brand-400"
-                              >
+                              <a href="/signup" class="text-brand-500 hover:text-brand-600 dark:text-brand-400">
                                    Sign Up
                               </a>
                          </p>

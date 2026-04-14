@@ -1,17 +1,30 @@
 <script lang="ts">
      let {
           label,
-          checked = $bindable(),
+          checked = $bindable(false),
           id,
           class: className = "",
-          disabled = false
+          disabled = false,
+          // PRIDAJ TOTO: definujeme onchange prop, aby o nej TypeScript vedel
+          onchange 
      }: {
           label?: string;
           checked: boolean;
           class?: string;
           id?: string;
           disabled?: boolean;
+          onchange?: (checked: boolean) => void;
      } = $props();
+
+     // Funkcia, ktorá obslúži zmenu
+     function handleChange(e: Event) {
+          const target = e.target as HTMLInputElement;
+          // Ak používaš bind:checked, hodnota sa zmení automaticky,
+          // ale ak chceš manuálne volať onchange callback (ako v Reacte):
+          if (onchange) {
+               onchange(target.checked);
+          }
+     }
 </script>
 
 <label
@@ -23,6 +36,8 @@
                type="checkbox"
                bind:checked
                {disabled}
+               /* Pridáme event listener */
+               onchange={handleChange}
                class="w-5 h-5 appearance-none cursor-pointer dark:border-gray-700 border border-gray-300 checked:border-transparent rounded-md checked:bg-brand-500 disabled:opacity-60 {className}"
           />
           

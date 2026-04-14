@@ -1,15 +1,21 @@
 <script lang="ts">
 	import '@fontsource-variable/outfit';
-	import './layout.css';
+	import './app.css';
+	import "flatpickr/dist/flatpickr.css";
 	import favicon from '$lib/assets/favicon.svg';
+
+	import { themeState } from '$lib/context/theme.svelte';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
-  	<link rel="icon" href={favicon} />
+  <link rel="icon" href={favicon} />
 </svelte:head>
 
-<div>
-  	{@render children()}
-</div>	
+<div class=" {themeState.current === 'dark' ? 'dark' : ''}">
+	<div class="bg-white dark:bg-gray-900 min-h-screen">
+		{@render children()}
+	</div>
+</div>
+
