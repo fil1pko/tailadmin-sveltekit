@@ -1,5 +1,5 @@
 <script lang="ts">
-     import type { Snippet } from 'svelte';
+     import type { Snippet, Component } from 'svelte';
 
      type BadgeVariant = "light" | "solid";
      type BadgeSize = "sm" | "md";
@@ -9,8 +9,8 @@
           variant?: BadgeVariant;
           size?: BadgeSize;
           color?: BadgeColor;
-          startIcon?: Snippet;
-          endIcon?: Snippet;
+          startIcon?: Component;
+          endIcon?: Component;
           children: Snippet;
      }
 
@@ -18,8 +18,8 @@
           variant = "light",
           color = "primary",
           size = "md",
-          startIcon,
-          endIcon,
+          startIcon: StartIcon,
+          endIcon: EndIcon,
           children
      }: Props = $props();
 
@@ -51,21 +51,22 @@
           },
      };
 
+     // Tu bola chyba - sizeStyles a variants musia byť definované nad týmto riadkom
      let combinedClasses = $derived(`${baseStyles} ${sizeStyles[size]} ${variants[variant][color]}`);
 </script>
 
 <span class={combinedClasses}>
-     {#if startIcon}
+     {#if StartIcon}
           <span class="mr-1">
-               {@render startIcon()}
+               <StartIcon />
           </span>
      {/if}
 
      {@render children()}
 
-     {#if endIcon}
+     {#if EndIcon}
           <span class="ml-1">
-               {@render endIcon()}
+               <EndIcon />
           </span>
      {/if}
 </span>

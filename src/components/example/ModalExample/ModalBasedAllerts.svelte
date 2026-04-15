@@ -1,6 +1,6 @@
 <script lang="ts">
      import ComponentCard from "../../common/ComponentCard.svelte";
-     import { Modal } from "../../ui/modal/index.svelte";
+     import Modal from "../../ui/modal/index.svelte";
 
      let successOpen = $state(false);
      let infoOpen = $state(false);
@@ -39,7 +39,7 @@
      <Modal
           isOpen={successOpen}
           onClose={() => successOpen = false}
-          class="max-w-[600px] p-5 lg:p-10"
+          className="max-w-[600px] p-5 lg:p-10"
      >
           <div class="text-center">
                <div class="relative flex items-center justify-center z-1 mb-7">
@@ -62,7 +62,7 @@
           </div>
      </Modal>
 
-     <Modal isOpen={infoOpen} onClose={() => infoOpen = false} class="max-w-[600px] p-5 lg:p-10">
+     <Modal isOpen={infoOpen} onClose={() => infoOpen = false} className="max-w-[600px] p-5 lg:p-10">
           <div class="text-center">
                <div class="relative flex items-center justify-center z-1 mb-7">
                     <svg class="fill-blue-light-50 dark:fill-blue-light-500/15" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +84,7 @@
           </div>
      </Modal>
 
-     <Modal isOpen={warningOpen} onClose={() => warningOpen = false} class="max-w-[600px] p-5 lg:p-10">
+     <Modal isOpen={warningOpen} onClose={() => warningOpen = false} className="max-w-[600px] p-5 lg:p-10">
           <div class="text-center">
                <div class="relative flex items-center justify-center z-1 mb-7">
                     <svg class="fill-warning-50 dark:fill-warning-500/15" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +106,7 @@
           </div>
      </Modal>
 
-     <Modal isOpen={errorOpen} onClose={() => errorOpen = false} class="max-w-[600px] p-5 lg:p-10">
+     <Modal isOpen={errorOpen} onClose={() => errorOpen = false} className="max-w-[600px] p-5 lg:p-10">
           <div class="text-center">
                <div class="relative flex items-center justify-center z-1 mb-7">
                     <svg class="fill-error-50 dark:fill-error-500/15" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">

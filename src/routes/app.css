@@ -724,16 +724,6 @@ span.flatpickr-weekday,
   @apply !hidden;
 }
 
-.jvm-tooltip {
-  @apply !bg-brand-500 !border-none !px-2 !py-1 !text-white !text-xs !rounded !font-medium;
-  font-family: var(--font-outfit);
-}
-
-.jvectormap-tip {
-  @apply !bg-brand-500 !border-none !px-2 !py-1 !text-white !text-xs !rounded !font-medium;
-}
-
-
 .form-check-input:checked ~ span {
   @apply border-[6px] border-brand-500 bg-brand-500 dark:border-brand-500;
 }

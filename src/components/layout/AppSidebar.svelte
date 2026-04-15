@@ -23,9 +23,16 @@
      ];
 
      const othersItems = [
-          { name: "Charts", icon: PieChartIcon, subItems: [{ name: "Line Chart", path: "/line-chart" }, { name: "Bar Chart", path: "/bar-chart" }] },
-          { name: "UI Elements", icon: BoxCubeIcon, subItems: [{ name: "Alerts", path: "/alerts" }, { name: "Avatar", path: "/avatars" }] },
-          { name: "Authentication", icon: PlugInIcon, subItems: [{ name: "Sign In", path: "/signin" }, { name: "Sign Up", path: "/signup" }] },
+          { name: "Charts", icon: PieChartIcon, subItems: [{ name: "Line Chart", path: "/line-chart", pro: false }, { name: "Bar Chart", path: "/bar-chart", pro: false }] },
+          { name: "UI Elements", icon: BoxCubeIcon, subItems: [
+               { name: "Alerts", path: "/alerts" },
+               { name: "Avatar", path: "/avatars" },
+               { name: "Badge", path: "/badge" },
+               { name: "Buttons", path: "/buttons" },
+               { name: "Images", path: "/images" },
+               { name: "Videos", path: "/videos" }
+          ]},
+          { name: "Authentication", icon: PlugInIcon, subItems: [{ name: "Sign In", path: "/signin", pro: false }, { name: "Sign Up", path: "/signup", pro: false }] },
      ];
 
      let openSubmenu = $state<{ type: "main" | "others"; index: number } | null>(null);

@@ -19,7 +19,7 @@
   ];
 
   onMount(async () => {
-    await import('jsvectormap/dist/css/jsvectormap.css');
+    // await import('jsvectormap/dist/css/jsvectormap.css');
     const jsVectorMap = (await import('jsvectormap')).default;
     await import('jsvectormap/dist/maps/world.js');
     
