@@ -1,6 +1,5 @@
 <script>
      import GridShape from "$components/common/GridShape.svelte";
-     import { PlusIcon } from "$lib/icons";
      import { page } from '$app/state';
 
      const currentYear = new Date().getFullYear();
