@@ -1,10 +1,21 @@
-<script>
-     import { resolve } from '$app/paths';
+<script lang="ts">
      import Dropdown from "../ui/dropdown/Dropdown.svelte";
      import DropdownItem from "../ui/dropdown/DropdownItem.svelte";
 
      let isOpen = $state(false); 
      let notifying = $state(true);
+
+     // Kompletný zoznam položiek s unikátnymi ID pre Svelte Key
+     const notifications = [
+          { id: 1, name: "Terry Franci", img: "/images/user/user-02.jpg", status: "bg-success-500", time: "5 min ago" },
+          { id: 2, name: "Alena Franci", img: "/images/user/user-03.jpg", status: "bg-success-500", time: "8 min ago" },
+          { id: 3, name: "Jocelyn Kenter", img: "/images/user/user-04.jpg", status: "bg-success-500", time: "15 min ago" },
+          { id: 4, name: "Brandon Philips", img: "/images/user/user-05.jpg", status: "bg-error-500", time: "1 hr ago" },
+          { id: 5, name: "Terry Franci", img: "/images/user/user-02.jpg", status: "bg-success-500", time: "5 min ago" },
+          { id: 6, name: "Alena Franci", img: "/images/user/user-03.jpg", status: "bg-success-500", time: "8 min ago" },
+          { id: 7, name: "Jocelyn Kenter", img: "/images/user/user-04.jpg", status: "bg-success-500", time: "15 min ago" },
+          { id: 8, name: "Brandon Philips", img: "/images/user/user-05.jpg", status: "bg-error-500", time: "1 hr ago" }
+     ];
 
      function toggleDropdown() {
           isOpen = !isOpen;
@@ -60,40 +71,42 @@
           </div>
 
           <ul class="flex flex-col h-auto overflow-y-auto custom-scrollbar">
-               <li>
-               <DropdownItem
-                    onItemClick={closeDropdown}
-                    className="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5"
-               >
-                    <span class="relative block w-full h-10 rounded-full z-1 max-w-10">
-                         <img
-                              src="/images/user/user-02.jpg"
-                              alt="User"
-                              width="40"
-                              height="40"
-                              class="w-full overflow-hidden rounded-full"
-                         />
-                         <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-green-500 dark:border-gray-900"></span>
-                    </span>
+               {#each notifications as item (item.id)}
+                    <li>
+                         <DropdownItem
+                              onItemClick={closeDropdown}
+                              className="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5"
+                         >
+                              <span class="relative block w-full h-10 rounded-full z-1 max-w-10">
+                                   <img
+                                        src={item.img}
+                                        alt="User"
+                                        width="40"
+                                        height="40"
+                                        class="w-full overflow-hidden rounded-full"
+                                   />
+                                   <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white {item.status} dark:border-gray-900"></span>
+                              </span>
 
-                    <span class="block">
-                         <span class="mb-1.5 space-x-1 block text-sm text-gray-500 dark:text-gray-400">
-                              <span class="font-medium text-gray-800 dark:text-white/90">Terry Franci</span>
-                              <span>requests permission to change</span>
-                              <span class="font-medium text-gray-800 dark:text-white/90">Project - Nganter App</span>
-                         </span>
-                         <span class="flex items-center gap-2 text-gray-500 text-xs dark:text-gray-400">
-                              <span>Project</span>
-                              <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
-                              <span>5 min ago</span>
-                         </span>
-                    </span>
-               </DropdownItem>
-               </li>
+                              <span class="block text-left">
+                                   <span class="mb-1.5 space-x-1 block text-theme-sm text-gray-500 dark:text-gray-400">
+                                        <span class="font-medium text-gray-800 dark:text-white/90">{item.name}</span>
+                                        <span>requests permission to change</span>
+                                        <span class="font-medium text-gray-800 dark:text-white/90">Project - Nganter App</span>
+                                   </span>
+                                   <span class="flex items-center gap-2 text-gray-500 text-theme-xs dark:text-gray-400">
+                                        <span>Project</span>
+                                        <span class="w-1 h-1 bg-gray-400 rounded-full"></span>
+                                        <span>{item.time}</span>
+                                   </span>
+                              </span>
+                         </DropdownItem>
+                    </li>
+               {/each}
           </ul>
 
           <a
-               href={resolve('/')}
+               href="/"
                class="block px-4 py-2 mt-3 text-sm font-medium text-center text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700"
           >
                View All Notifications
