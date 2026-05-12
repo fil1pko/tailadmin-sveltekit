@@ -97,11 +97,11 @@
      };
 </script>
 
-<div class="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/[0.05] dark:bg-white/[0.03]">
+<div class="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/5 dark:bg-white/3">
      <div class="max-w-full overflow-x-auto">
-          <div class="min-w-[1102px]">
+          <div class="min-w-275.5">
                <Table>
-                    <TableHeader class="border-b border-gray-100 dark:border-white/[0.05]">
+                    <TableHeader class="border-b border-gray-100 dark:border-white/5">
                          <TableRow>
                          {#each ["User", "Project Name", "Team", "Status", "Budget"] as header (header)}
                               <TableCell
@@ -114,7 +114,7 @@
                          </TableRow>
                     </TableHeader>
 
-                    <TableBody class="divide-y divide-gray-100 dark:divide-white/[0.05]">
+                    <TableBody class="divide-y divide-gray-100 dark:divide-white/5">
                          {#each tableData as order (order.id)}
                          <TableRow>
                          <TableCell class="px-5 py-4 sm:px-6 text-start">

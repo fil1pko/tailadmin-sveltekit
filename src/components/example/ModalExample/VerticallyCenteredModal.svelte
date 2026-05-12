@@ -1,7 +1,7 @@
 <script lang="ts">
      import ComponentCard from "../../common/ComponentCard.svelte";
      import Button from "../../ui/button/Button.svelte";
-     import { Modal } from "../../ui/modal/index.svelte";
+     import Modal from "../../ui/modal/index.svelte";
 
      let isOpen = $state(false);
 
@@ -28,7 +28,7 @@
           {isOpen}
           onClose={closeModal}
           showCloseButton={false}
-          class="max-w-[507px] p-6 lg:p-10"
+          className="max-w-126.75 p-6 lg:p-10"
      >
           <div class="text-center">
                <h4 class="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90 sm:text-title-sm">

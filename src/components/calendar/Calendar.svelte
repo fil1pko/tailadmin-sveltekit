@@ -169,12 +169,12 @@
      }
 </script>
 
-<div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+<div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/3">
      <div class="custom-calendar">
           <div bind:this={calendarElement}></div>
      </div>
 
-     <Modal {isOpen} onClose={() => (isOpen = false)} className="max-w-[700px] p-6 lg:p-10">
+     <Modal {isOpen} onClose={() => (isOpen = false)} className="max-w-175 p-6 lg:p-10">
           <div class="flex flex-col px-2 overflow-y-auto custom-scrollbar">
                <div>
                     <h5 class="mb-2 font-semibold text-gray-800 text-theme-xl dark:text-white/90 lg:text-2xl">
@@ -259,7 +259,7 @@
                     <button
                          type="button"
                          onclick={() => (isOpen = false)}
-                         class="flex w-full justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] sm:w-auto"
+                         class="flex w-full justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/3 sm:w-auto"
                     >
                          Close
                     </button>

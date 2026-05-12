@@ -1,7 +1,7 @@
 <script lang="ts">
      import ComponentCard from "../../common/ComponentCard.svelte";
      import Button from "../../ui/button/Button.svelte";
-     import { Modal } from "../../ui/modal/index.svelte";
+     import Modal from "../../ui/modal/index.svelte";
      import Label from "../../form/Label.svelte";
      import Input from "../../form/input/InputField.svelte";
 
@@ -30,7 +30,7 @@
      <Modal
           {isOpen}
           onClose={closeModal}
-          class="max-w-[584px] p-5 lg:p-10"
+          className="max-w-146 p-5 lg:p-10"
      >
           <form onsubmit={handleSave}>
                <h4 class="mb-6 text-lg font-medium text-gray-800 dark:text-white/90">
@@ -65,10 +65,10 @@
                </div>
 
                <div class="flex items-center justify-end w-full gap-3 mt-6">
-                    <Button size="sm" variant="outline" onclick={closeModal} type="button">
+                    <Button size="sm" variant="outline" onclick={closeModal}>
                          Close
                     </Button>
-                    <Button size="sm" type="submit">
+                    <Button size="sm">
                          Save Changes
                     </Button>
                </div>

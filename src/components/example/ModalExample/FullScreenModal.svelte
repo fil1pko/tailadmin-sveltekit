@@ -1,7 +1,7 @@
 <script lang="ts">
      import ComponentCard from "../../common/ComponentCard.svelte";
      import Button from "../../ui/button/Button.svelte";
-     import { Modal } from "../../ui/modal";
+     import Modal from "../../ui/modal/index.svelte";
 
      let isFullscreenModalOpen = $state(false);
 

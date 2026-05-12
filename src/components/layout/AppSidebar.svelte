@@ -67,7 +67,7 @@
 
 <aside
      class="fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 left-0 bg-white dark:bg-gray-900 dark:border-gray-800 text-gray-900 h-screen transition-all duration-300 ease-in-out z-50 border-r border-gray-200 
-          {sidebar.isExpanded || sidebar.isMobileOpen || sidebar.isHovered ? 'w-[290px]' : 'w-[90px]'}
+          {sidebar.isExpanded || sidebar.isMobileOpen || sidebar.isHovered ? 'w-72.5' : 'w-22.5'}
           {sidebar.isMobileOpen ? 'translate-x-0' : '-translate-x-full'}
      lg:translate-x-0"
      onmouseenter={() => !sidebar.isExpanded && sidebar.setIsHovered(true)}
@@ -89,7 +89,7 @@
                <div class="flex flex-col gap-4">
                     {#each [{title: 'Menu', items: navItems, type: 'main'}, {title: 'Others', items: othersItems, type: 'others'}] as section (section.type)}
                          <div>
-                              <h2 class="mb-4 text-xs uppercase flex leading-[20px] text-gray-400 {!sidebar.isExpanded && !sidebar.isHovered ? 'lg:justify-center' : 'justify-start'}">
+                              <h2 class="mb-4 text-xs uppercase flex leading-5 text-gray-400 {!sidebar.isExpanded && !sidebar.isHovered ? 'lg:justify-center' : 'justify-start'}">
                                    {#if sidebar.isExpanded || sidebar.isHovered || sidebar.isMobileOpen}
                                         {section.title}
                                    {:else}

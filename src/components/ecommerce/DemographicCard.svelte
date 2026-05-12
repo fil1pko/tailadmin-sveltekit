@@ -15,7 +15,7 @@
      }
 </script>
 
-<div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] sm:p-6">
+<div class="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/3 sm:p-6">
      <div class="flex justify-between">
           <div>
                <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
@@ -51,7 +51,7 @@
      <div class="px-4 py-6 my-6 overflow-hidden border border-gary-200 rounded-2xl bg-gray-50 dark:border-gray-800 dark:bg-gray-900 sm:px-6">
           <div
                id="mapOne"
-               class="mapOne map-btn -mx-4 -my-6 h-[212px] w-[252px] 2xsm:w-[307px] xsm:w-[358px] sm:-mx-6 md:w-[668px] lg:w-[634px] xl:w-[393px] 2xl:w-[554px]"
+               class="mapOne map-btn -mx-4 -my-6 h-53 w-63 2xsm:w-76.75 xsm:w-89.5 sm:-mx-6 md:w-167 lg:w-158.5 xl:w-92.25 2xl:w-138.5"
           >
                <CountryMap />
           </div>
@@ -79,8 +79,8 @@
                     </div>
                </div>
 
-               <div class="flex w-full max-w-[140px] items-center gap-3">
-                    <div class="relative block h-2 w-full max-w-[100px] rounded-sm bg-gray-200 dark:bg-gray-800">
+               <div class="flex w-full max-w-35 items-center gap-3">
+                    <div class="relative block h-2 w-full max-w-25 rounded-sm bg-gray-200 dark:bg-gray-800">
                          <div 
                               class="absolute left-0 top-0 flex h-full items-center justify-center rounded-sm bg-brand-500 text-xs font-medium text-white"
                               style="width: 79%"
@@ -113,8 +113,8 @@
                     </div>
                </div>
 
-               <div class="flex w-full max-w-[140px] items-center gap-3">
-                    <div class="relative block h-2 w-full max-w-[100px] rounded-sm bg-gray-200 dark:bg-gray-800">
+               <div class="flex w-full max-w-35 items-center gap-3">
+                    <div class="relative block h-2 w-full max-w-25 rounded-sm bg-gray-200 dark:bg-gray-800">
                          <div 
                               class="absolute left-0 top-0 flex h-full items-center justify-center rounded-sm bg-brand-500 text-xs font-medium text-white"
                               style="width: 23%"

@@ -80,7 +80,7 @@
      });
 </script>
 
-<div class="rounded-2xl border border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-white/[0.03]">
+<div class="rounded-2xl border border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-white/3">
      <div class="px-5 pt-5 bg-white shadow-default rounded-2xl pb-11 dark:bg-gray-900 sm:px-6 sm:pt-6">
           <div class="flex justify-between">
                <div>
@@ -114,7 +114,7 @@
           </div>
 
           <div class="relative">
-               <div class="max-h-[330px]">
+               <div class="max-h-82.5">
                     <div bind:this={chartEl}></div>
                </div>
 
@@ -123,7 +123,7 @@
                </span>
           </div>
 
-          <p class="mx-auto mt-10 w-full max-w-[380px] text-center text-sm text-gray-500 sm:text-base">
+          <p class="mx-auto mt-10 w-full max-w-95 text-center text-sm text-gray-500 sm:text-base">
                You earn $3287 today, it's higher than last month. Keep up your good work!
           </p>
      </div>

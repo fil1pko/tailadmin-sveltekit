@@ -25,7 +25,7 @@
                     <Input
                          placeholder="info@gmail.com"
                          type="text"
-                         class="pl-[62px]"
+                         class="pl-15.5"
                     />
                     <span class="absolute left-0 top-1/2 -translate-y-1/2 border-r border-gray-200 px-3.5 py-3 text-gray-500 dark:border-gray-800 dark:text-gray-400">
                          <EnvelopeIcon />

@@ -1,6 +1,6 @@
 <script lang="ts">
      import ComponentCard from "../../common/ComponentCard.svelte";
-     import { Modal } from "../../ui/modal/index.svelte";
+     import Modal  from "../../ui/modal/index.svelte";
      import Button from "../../ui/button/Button.svelte";
 
      let isOpen = $state(false);
@@ -28,7 +28,7 @@
           <Modal
                {isOpen}
                onClose={closeModal}
-               class="max-w-[600px] p-5 lg:p-10"
+               className="max-w-150 p-5 lg:p-10"
           >
                <h4 class="font-semibold text-gray-800 mb-7 text-title-sm dark:text-white/90">
                     Modal Heading

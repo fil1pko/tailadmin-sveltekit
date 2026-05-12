@@ -72,7 +72,7 @@
 </script>
 
 <div class="max-w-full overflow-x-auto custom-scrollbar">
-     <div id="chartOne" class="min-w-[1000px]">
+     <div id="chartOne" class="min-w-250">
           <div bind:this={chartEl}></div>
      </div>
 </div>

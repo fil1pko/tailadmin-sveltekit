@@ -15,7 +15,7 @@
 <div>
      <PageBreadcrumb pageTitle="Badges" />
      <div class="space-y-5 sm:space-y-6">
-          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800dark:bg-white/3">
                <div class="px-6 py-5">
                     <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
                          With Light Background
@@ -34,7 +34,7 @@
                </div>
           </div>
 
-          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/3">
                <div class="px-6 py-5">
                     <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
                          With Solid Background
@@ -53,7 +53,7 @@
                </div>
           </div>
 
-          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/3">
                <div class="px-6 py-5">
                     <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
                          Light Background with Left Icon
@@ -72,7 +72,7 @@
                </div>
           </div>
 
-          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/3">
                <div class="px-6 py-5">
                     <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
                          Solid Background with Left Icon
@@ -91,7 +91,7 @@
                </div>
           </div>
 
-          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/3">
                <div class="px-6 py-5">
                     <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
                          Light Background with Right Icon
@@ -110,7 +110,7 @@
                </div>
           </div>
 
-          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+          <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/3">
                <div class="px-6 py-5">
                     <h3 class="text-base font-medium text-gray-800 dark:text-white/90">
                          Solid Background with Right Icon
